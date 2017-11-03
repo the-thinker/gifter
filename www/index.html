@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Gifter</title>
+        <link rel="stylesheet" href="./style/main.css">
+        <link rel="stylesheet" href="./style/style.css">
+        <link rel="stylesheet" href="./style/radiobutton.css">
+        <link rel="stylesheet" href="./style/checkbox.css">
+        <script src="./script/jquery-3.2.1.min.js"></script>
+    </head>
+    <body>
+        <div class="bag-button"></div>
+        <div class="sign-up-popup">
+            <div class="sign-up-div">
+                <img class="popup-cancel" src="./img/Cancel.png">
+                <div class="registration">
+                    <div class="now-here">Now Here? <span style="color:#f35b61;">Sign Up<span></div>
+                    <input type="text" placeholder="Name">
+                    <input type="text" placeholder="Surame">
+                    <input type="text" placeholder="Email Address">
+                    <input type="password" placeholder="Create a password">
+                    <input type="password" placeholder="Confirm a password">
+                    <div style="display:inline">
+                        <button class="registration-button">Registration</button>
+                        <div class="login-with-facebook"></div>
+                        <span class="or-span">or</span>
+                    </div>
+                </div>
+                <div class="login">
+                    <div class="now-here" style="color:#666666;">Sign In</div>
+                    <input type="text" placeholder="Email Address">
+                    <input type="password" placeholder="Password">
+                    <div class="remember-me"><span>Remember me</span>
+                           <label class="control control--checkbox">
+                             <input type="checkbox"/>
+                             <div class="control__indicator"></div>
+                           </label>
+                    </div>
+                    <button class="login-button">Login Into Your Account</button>
+                </div>
+                <div class="terms-accept">IM over 18, and I agree to the <span style="color:#f35b61;">Conditions</span> and <span style="color:#f35b61;">Terms of Use</span>
+                   <label class="pink-checkbox control control--checkbox">
+                     <input type="checkbox"/>
+                     <div class="control__indicator"></div>
+                   </label>
+                </div>
+            </div>
+        </div>
+        <div class="header">
+            <div class="logo-bcakground"></div>
+            <div class="header-element search-logo" src="./img/search.png"></div>
+            <div class="header-element whishlist-logo" src="./img/white_heart.png"></div>
+            <div class="header-element basket-logo" src="./img/basket.png"></div>
+            <div class="header-element sign-up">SIGN UP</div>
+            <div class="header-element language-select">
+                <span class="language-option">ARM</span>
+                <span class="language-option language-option-selected">ENG</span>
+                <span class="language-option">RUS</span>
+            </div>
+            <div class="header-element seperatior-line"></div>
+            <div class="header-element header-option">ABOUT US</div>
+            <div class="header-element header-option">PARTNERS</div>
+            <div class="header-element header-option">WHAT IS GIFTBOX?</div>
+            <div class="header-element header-option">HOW TO ORDER</div>
+            <div class="header-element header-option">NEWS</div>
+            <div class="header-element header-option header-option-selected">HOME</div>
+        </div>
+        <div class="menu">
+            <div class="menu-left-space"></div>
+            <div class="menu-option-overflow"><div class="menu-option">FLOWERS</div></div>
+            <div class="menu-option-overflow"><div class="menu-option">PARFUME</div></div>
+            <div class="menu-option-overflow"><div class="menu-option">JEWELRY</div></div>
+            <div class="menu-option-overflow"><div class="menu-option">CANDIES</div></div>
+            <div class="menu-option-overflow"><div class="menu-option">ALCOHOL</div></div>
+            <div class="menu-option-overflow"><div class="menu-option">TOYS</div></div>
+            <div class="menu-option-overflow"><div class="menu-option">LEATHER</div></div>
+            <div class="menu-option-overflow"><div class="menu-option menu-option-last">T-SHIRTS</div></div>
+        </div>
+        <div class="search-back">
+            <div class="search">
+                <div class="search-bar">
+                    <img src="./img/search.png">
+                    <input type="text" placeholder="Search">
+                </div>
+                <div class="search-result-div">
+                    <span class="peaple-also-search">People also search</span>
+                    <span class="search-suggestions">TOM FORD BLACK ORCHID 100ML</span>
+                    <span class="search-suggestions">CHANEL CHANCE</span>
+                    <span class="search-suggestions">ADIDAS</span>
+                </div>
+            </div>
+        </div>
+        <div class="main">
+            <iframe src="./slideshow.html" class="slideshow"></iframe>
+            <div class="bestsellers-label">BESTSELLERS</div>
+            <div class="bestsellers">
+                <div class="bestsellers-left-space"></div>
+                <div class="bestsellers-right-space"></div>
+                <div class="bestseller-first-line"></div>
+                <div class="bestsellers-line" data-bestseller-number="1">
+                    <div class="bestsellers-item">
+                        <div class="bestseller-title">Denim Shorts In Slim Fit</div>
+                        <div class="bestseller-subtitle">Shorts</div>
+                        <img class="bestseller-image" src="https://www.facebook.com/messages/t/arthur.yeprem">
+                        <div class="bestseller-price">$124</div>
+                        <div class="bestseller-overflow">
+                            <div class="bestseller-addtobag">
+                                Add to Bag >
+                            </div>
+                            <div class="bestseller-wishlist">❤ Add to wishlist</div>
+                        </div>
+                    </div>
+                    <div class="bestsellers-item">
+                        <div class="bestseller-title">New Look Chino Shorts</div>
+                        <div class="bestseller-subtitle">Shorts</div>
+                        <img class="bestseller-image" src="https://s-media-cache-ak0.pinimg.com/736x/94/60/14/9460144ccf143619fac3560c5289e97d--belted-shorts-khaki-shorts.jpg">
+                        <div class="bestseller-price">$76</div>
+                        <div class="bestseller-overflow">
+                            <div class="bestseller-addtobag">
+                                Add to Bag >
+                            </div>
+                            <div class="bestseller-wishlist">❤ Add to wishlist</div>
+                        </div>
+                    </div>
+                    <div class="bestsellers-item">
+                        <div class="bestseller-title">Jack & Jones Chino Shorts</div>
+                        <div class="bestseller-subtitle">Shorts</div>
+                        <img class="bestseller-image" src="https://www.polyvore.com/cgi/img-thing?.out=jpg&size=l&tid=108847223">
+                        <div class="bestseller-price">$117</div>
+                        <div class="bestseller-overflow">
+                            <div class="bestseller-addtobag">
+                                Add to Bag >
+                            </div>
+                            <div class="bestseller-wishlist">❤ Add to wishlist</div>
+                        </div>
+                    </div>
+                    <div class="bestsellers-item">
+                        <div class="bestseller-title">Bellfield Chino Shorts</div>
+                        <div class="bestseller-subtitle">Shorts</div>
+                        <img class="bestseller-image" src="http://www.jamesandjamesfootwear.com/38737-home_default/bellfield-basic-chino-shorts-soft-blue.jpg">
+                        <div class="bestseller-price">$92</div>
+                        <div class="bestseller-overflow">
+                            <div class="bestseller-addtobag">
+                                Add to Bag >
+                            </div>
+                            <div class="bestseller-wishlist">❤ Add to wishlist</div>
+                        </div>
+                    </div>
+                    <div class="bestsellers-item">
+                        <div class="bestseller-title">Denim Shorts In Slim Fit</div>
+                        <div class="bestseller-subtitle">Shorts</div>
+                        <img class="bestseller-image" src="https://images-na.ssl-images-amazon.com/images/I/815UtryisXL._UL1500_.jpg">
+                        <div class="bestseller-price">$124</div>
+                        <div class="bestseller-overflow">
+                            <div class="bestseller-addtobag">
+                                Add to Bag >
+                            </div>
+                            <div class="bestseller-wishlist">❤ Add to wishlist</div>
+                        </div>
+                    </div>
+                    <div class="bestsellers-item">
+                        <div class="bestseller-title">Denim Shorts In Slim Fit</div>
+                        <div class="bestseller-subtitle">Shorts</div>
+                        <img class="bestseller-image" src="https://images-na.ssl-images-amazon.com/images/I/815UtryisXL._UL1500_.jpg">
+                        <div class="bestseller-price">$124</div>
+                        <div class="bestseller-overflow">
+                            <div class="bestseller-addtobag">
+                                Add to Bag >
+                            </div>
+                            <div class="bestseller-wishlist">❤ Add to wishlist</div>
+                        </div>
+                    </div>
+                    <div class="bestsellers-item">
+                        <div class="bestseller-title">Denim Shorts In Slim Fit</div>
+                        <div class="bestseller-subtitle">Shorts</div>
+                        <img class="bestseller-image" src="https://images-na.ssl-images-amazon.com/images/I/815UtryisXL._UL1500_.jpg">
+                        <div class="bestseller-price">$124</div>
+                        <div class="bestseller-overflow">
+                            <div class="bestseller-addtobag">
+                                Add to Bag >
+                            </div>
+                            <div class="bestseller-wishlist">❤ Add to wishlist</div>
+                        </div>
+                    </div>
+                    <div class="bestsellers-item">
+                        <div class="bestseller-title">Denim Shorts In Slim Fit</div>
+                        <div class="bestseller-subtitle">Shorts</div>
+                        <img class="bestseller-image" src="https://images-na.ssl-images-amazon.com/images/I/815UtryisXL._UL1500_.jpg">
+                        <div class="bestseller-price">$124</div>
+                        <div class="bestseller-overflow">
+                            <div class="bestseller-addtobag">
+                                Add to Bag >
+                            </div>
+                            <div class="bestseller-wishlist">❤ Add to wishlist</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bestsellers-line" data-bestseller-number="2" style="display:none;">
+                    <div class="bestsellers-item">
+                        <div class="bestseller-title">Denim Shorts In Slim Fit</div>
+                        <div class="bestseller-subtitle">Shorts</div>
+                        <img class="bestseller-image" src="https://images-na.ssl-images-amazon.com/images/I/815UtryisXL._UL1500_.jpg">
+                        <div class="bestseller-price">$124</div>
+                        <div class="bestseller-overflow">
+                            <div class="bestseller-addtobag">
+                                Add to Bag >
+                            </div>
+                            <div class="bestseller-wishlist">❤ Add to wishlist</div>
+                        </div>
+                    </div>
+                    <div class="bestsellers-item">
+                        <div class="bestseller-title">New Look Chino Shorts</div>
+                        <div class="bestseller-subtitle">Shorts</div>
+                        <img class="bestseller-image" src="https://s-media-cache-ak0.pinimg.com/736x/94/60/14/9460144ccf143619fac3560c5289e97d--belted-shorts-khaki-shorts.jpg">
+                        <div class="bestseller-price">$76</div>
+                        <div class="bestseller-overflow">
+                            <div class="bestseller-addtobag">
+                                Add to Bag >
+                            </div>
+                            <div class="bestseller-wishlist">❤ Add to wishlist</div>
+                        </div>
+                    </div>
+                    <div class="bestsellers-item">
+                        <div class="bestseller-title">Jack & Jones Chino Shorts</div>
+                        <div class="bestseller-subtitle">Shorts</div>
+                        <img class="bestseller-image" src="https://www.polyvore.com/cgi/img-thing?.out=jpg&size=l&tid=108847223">
+                        <div class="bestseller-price">$117</div>
+                        <div class="bestseller-overflow">
+                            <div class="bestseller-addtobag">
+                                Add to Bag >
+                            </div>
+                            <div class="bestseller-wishlist">❤ Add to wishlist</div>
+                        </div>
+                    </div>
+                    <div class="bestsellers-item">
+                        <div class="bestseller-title">Bellfield Chino Shorts</div>
+                        <div class="bestseller-subtitle">Shorts</div>
+                        <img class="bestseller-image" src="http://www.jamesandjamesfootwear.com/38737-home_default/bellfield-basic-chino-shorts-soft-blue.jpg">
+                        <div class="bestseller-price">$92</div>
+                        <div class="bestseller-overflow">
+                            <div class="bestseller-addtobag">
+                                Add to Bag >
+                            </div>
+                            <div class="bestseller-wishlist">❤ Add to wishlist</div>
+                        </div>
+                    </div>
+                    <div class="bestsellers-item">
+                        <div class="bestseller-title">Denim Shorts In Slim Fit</div>
+                        <div class="bestseller-subtitle">Shorts</div>
+                        <img class="bestseller-image" src="https://images-na.ssl-images-amazon.com/images/I/815UtryisXL._UL1500_.jpg">
+                        <div class="bestseller-price">$124</div>
+                        <div class="bestseller-overflow">
+                            <div class="bestseller-addtobag">
+                                Add to Bag >
+                            </div>
+                            <div class="bestseller-wishlist">❤ Add to wishlist</div>
+                        </div>
+                    </div>
+                    <div class="bestsellers-item">
+                        <div class="bestseller-title">Denim Shorts In Slim Fit</div>
+                        <div class="bestseller-subtitle">Shorts</div>
+                        <img class="bestseller-image" src="https://images-na.ssl-images-amazon.com/images/I/815UtryisXL._UL1500_.jpg">
+                        <div class="bestseller-price">$124</div>
+                        <div class="bestseller-overflow">
+                            <div class="bestseller-addtobag">
+                                Add to Bag >
+                            </div>
+                            <div class="bestseller-wishlist">❤ Add to wishlist</div>
+                        </div>
+                    </div>
+                    <div class="bestsellers-item">
+                        <div class="bestseller-title">Denim Shorts In Slim Fit</div>
+                        <div class="bestseller-subtitle">Shorts</div>
+                        <img class="bestseller-image" src="https://images-na.ssl-images-amazon.com/images/I/815UtryisXL._UL1500_.jpg">
+                        <div class="bestseller-price">$124</div>
+                        <div class="bestseller-overflow">
+                            <div class="bestseller-addtobag">
+                                Add to Bag >
+                            </div>
+                            <div class="bestseller-wishlist">❤ Add to wishlist</div>
+                        </div>
+                    </div>
+                    <div class="bestsellers-item">
+                        <div class="bestseller-title">Denim Shorts In Slim Fit</div>
+                        <div class="bestseller-subtitle">Shorts</div>
+                        <img class="bestseller-image" src="https://images-na.ssl-images-amazon.com/images/I/815UtryisXL._UL1500_.jpg">
+                        <div class="bestseller-price">$124</div>
+                        <div class="bestseller-overflow">
+                            <div class="bestseller-addtobag">
+                                Add to Bag >
+                            </div>
+                            <div class="bestseller-wishlist">❤ Add to wishlist</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bestsellers-line" data-bestseller-number="3" style="display:none;">
+                    <div class="bestsellers-item">
+                        <div class="bestseller-title">Denim Shorts In Slim Fit</div>
+                        <div class="bestseller-subtitle">Shorts</div>
+                        <img class="bestseller-image" src="https://images-na.ssl-images-amazon.com/images/I/815UtryisXL._UL1500_.jpg">
+                        <div class="bestseller-price">$124</div>
+                        <div class="bestseller-overflow">
+                            <div class="bestseller-addtobag">
+                                Add to Bag >
+                            </div>
+                            <div class="bestseller-wishlist">❤ Add to wishlist</div>
+                        </div>
+                    </div>
+                    <div class="bestsellers-item">
+                        <div class="bestseller-title">New Look Chino Shorts</div>
+                        <div class="bestseller-subtitle">Shorts</div>
+                        <img class="bestseller-image" src="https://s-media-cache-ak0.pinimg.com/736x/94/60/14/9460144ccf143619fac3560c5289e97d--belted-shorts-khaki-shorts.jpg">
+                        <div class="bestseller-price">$76</div>
+                        <div class="bestseller-overflow">
+                            <div class="bestseller-addtobag">
+                                Add to Bag >
+                            </div>
+                            <div class="bestseller-wishlist">❤ Add to wishlist</div>
+                        </div>
+                    </div>
+                    <div class="bestsellers-item">
+                        <div class="bestseller-title">Jack & Jones Chino Shorts</div>
+                        <div class="bestseller-subtitle">Shorts</div>
+                        <img class="bestseller-image" src="https://www.polyvore.com/cgi/img-thing?.out=jpg&size=l&tid=108847223">
+                        <div class="bestseller-price">$117</div>
+                        <div class="bestseller-overflow">
+                            <div class="bestseller-addtobag">
+                                Add to Bag >
+                            </div>
+                            <div class="bestseller-wishlist">❤ Add to wishlist</div>
+                        </div>
+                    </div>
+                    <div class="bestsellers-item">
+                        <div class="bestseller-title">Bellfield Chino Shorts</div>
+                        <div class="bestseller-subtitle">Shorts</div>
+                        <img class="bestseller-image" src="http://www.jamesandjamesfootwear.com/38737-home_default/bellfield-basic-chino-shorts-soft-blue.jpg">
+                        <div class="bestseller-price">$92</div>
+                        <div class="bestseller-overflow">
+                            <div class="bestseller-addtobag">
+                                Add to Bag >
+                            </div>
+                            <div class="bestseller-wishlist">❤ Add to wishlist</div>
+                        </div>
+                    </div>
+                    <div class="bestsellers-item">
+                        <div class="bestseller-title">Denim Shorts In Slim Fit</div>
+                        <div class="bestseller-subtitle">Shorts</div>
+                        <img class="bestseller-image" src="https://images-na.ssl-images-amazon.com/images/I/815UtryisXL._UL1500_.jpg">
+                        <div class="bestseller-price">$124</div>
+                        <div class="bestseller-overflow">
+                            <div class="bestseller-addtobag">
+                                Add to Bag >
+                            </div>
+                            <div class="bestseller-wishlist">❤ Add to wishlist</div>
+                        </div>
+                    </div>
+                    <div class="bestsellers-item">
+                        <div class="bestseller-title">Denim Shorts In Slim Fit</div>
+                        <div class="bestseller-subtitle">Shorts</div>
+                        <img class="bestseller-image" src="https://images-na.ssl-images-amazon.com/images/I/815UtryisXL._UL1500_.jpg">
+                        <div class="bestseller-price">$124</div>
+                        <div class="bestseller-overflow">
+                            <div class="bestseller-addtobag">
+                                Add to Bag >
+                            </div>
+                            <div class="bestseller-wishlist">❤ Add to wishlist</div>
+                        </div>
+                    </div>
+                    <div class="bestsellers-item">
+                        <div class="bestseller-title">Denim Shorts In Slim Fit</div>
+                        <div class="bestseller-subtitle">Shorts</div>
+                        <img class="bestseller-image" src="https://images-na.ssl-images-amazon.com/images/I/815UtryisXL._UL1500_.jpg">
+                        <div class="bestseller-price">$124</div>
+                        <div class="bestseller-overflow">
+                            <div class="bestseller-addtobag">
+                                Add to Bag >
+                            </div>
+                            <div class="bestseller-wishlist">❤ Add to wishlist</div>
+                        </div>
+                    </div>
+                    <div class="bestsellers-item">
+                        <div class="bestseller-title">Denim Shorts In Slim Fit</div>
+                        <div class="bestseller-subtitle">Shorts</div>
+                        <img class="bestseller-image" src="https://images-na.ssl-images-amazon.com/images/I/815UtryisXL._UL1500_.jpg">
+                        <div class="bestseller-price">$124</div>
+                        <div class="bestseller-overflow">
+                            <div class="bestseller-addtobag">
+                                Add to Bag >
+                            </div>
+                            <div class="bestseller-wishlist">❤ Add to wishlist</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="bestsellers-list-select" data-bestsellers-count="3">
+                <img width="13px" height="22px" src="./img/_left.png" id="bestsellers_prew_page">
+            	<input type="radio" id="rad1" name="rads" data-radio-bestseller-number="1" checked="true">
+            	<label for="rad1"></label>
+            	<input type="radio" id="rad2" name="rads" data-radio-bestseller-number="2">
+            	<label for="rad2"></label>
+            	<input type="radio" id="rad3" name="rads" data-radio-bestseller-number="3">
+            	<label for="rad3"></label>
+                <img width="13px" height="22px" src="./img/_right.png" id="bestsellers_next_page">
+            </div>
+
+            <div class="horizontal-seperator"></div><div class="newproducts-menu">
+                <div class="newproducts-menu-prew">
+                    <img width="13px" height="22px" src="./img/_left.png" style="float:left;">
+                    <div class="newproducts-menu-prew-text">PREW</div>
+                </div>
+                <div class="newproducts-menu-label">
+                    NEW PRODUCTS
+                </div>
+                <div class="newproducts-menu-next">
+                    <img width="13px" height="22px" src="./img/_right.png" style="float:right;">
+                    <div class="newproducts-menu-next-text">NEXT</div>
+                </div>
+            </div>
+            <div class="newproducts-left-space"></div>
+            <div class="newproducts-right-space"></div>
+            <div class="newproducts">
+                <div class="newproducts-line" data-newproducts-number="1">
+                    <div class="newproducts-item newproducts-item-first">
+                        <img class="newproducts-item-img" src="http://www.colorhexa.com/e7e7e7.png">
+                        <div class="newproducts-item-type type-color-t-shirt">T-SHIRT</div>
+                        <div class="newproducts-item-title">Fashion Targets Breast Cancer's Hottest Buys</div>
+                    </div>
+                    <div class="newproducts-item">
+                        <img class="newproducts-item-img" src="http://www.colorhexa.com/e7e7e7.png">
+                        <div class="newproducts-item-type type-color-parfume">PARFUME</div>
+                        <div class="newproducts-item-title">Ankle Boots: The Spring Edit</div>
+                    </div>
+                    <div class="newproducts-item">
+                        <img class="newproducts-item-img" src="http://www.colorhexa.com/e7e7e7.png">
+                        <div class="newproducts-item-type type-color-leather">LEATHER</div>
+                        <div class="newproducts-item-title">The 8 Must-Have Handbags of 2015</div>
+                    </div>
+                    <div class="newproducts-item">
+                        <img class="newproducts-item-img" src="http://www.colorhexa.com/e7e7e7.png">
+                        <div class="newproducts-item-type type-color-flowers">FLOWERS</div>
+                        <div class="newproducts-item-title">Perrie Edwards And Her Fab Feshion File</div>
+                    </div>
+                </div>
+                <div class="newproducts-line" data-newproducts-number="2" style="display:none">
+                    <div class="newproducts-item newproducts-item-first">
+                        <img class="newproducts-item-img" src="http://www.colorhexa.com/e7e7e7.png">
+                        <div class="newproducts-item-type type-color-t-shirt">T-SHIRT</div>
+                        <div class="newproducts-item-title">Fashion Targets Breast Cancer's Hottest Buys</div>
+                    </div>
+                    <div class="newproducts-item">
+                        <img class="newproducts-item-img" src="http://www.colorhexa.com/e7e7e7.png">
+                        <div class="newproducts-item-type type-color-parfume">PARFUME</div>
+                        <div class="newproducts-item-title">Ankle Boots: The Spring Edit</div>
+                    </div>
+                    <div class="newproducts-item">
+                        <img class="newproducts-item-img" src="http://www.colorhexa.com/e7e7e7.png">
+                        <div class="newproducts-item-type type-color-leather">LEATHER</div>
+                        <div class="newproducts-item-title">The 8 Must-Have Handbags of 2015</div>
+                    </div>
+                    <div class="newproducts-item">
+                        <img class="newproducts-item-img" src="http://www.colorhexa.com/e7e7e7.png">
+                        <div class="newproducts-item-type type-color-flowers">FLOWERS</div>
+                        <div class="newproducts-item-title">Perrie Edwards And Her Fab Feshion File</div>
+                    </div>
+                </div>
+                <div class="newproducts-line" data-newproducts-number="3" style="display:none">
+                    <div class="newproducts-item newproducts-item-first">
+                        <img class="newproducts-item-img" src="http://www.colorhexa.com/e7e7e7.png">
+                        <div class="newproducts-item-type type-color-t-shirt">T-SHIRT</div>
+                        <div class="newproducts-item-title">Fashion Targets Breast Cancer's Hottest Buys</div>
+                    </div>
+                    <div class="newproducts-item">
+                        <img class="newproducts-item-img" src="http://www.colorhexa.com/e7e7e7.png">
+                        <div class="newproducts-item-type type-color-parfume">PARFUME</div>
+                        <div class="newproducts-item-title">Ankle Boots: The Spring Edit</div>
+                    </div>
+                    <div class="newproducts-item">
+                        <img class="newproducts-item-img" src="http://www.colorhexa.com/e7e7e7.png">
+                        <div class="newproducts-item-type type-color-leather">LEATHER</div>
+                        <div class="newproducts-item-title">The 8 Must-Have Handbags of 2015</div>
+                    </div>
+                    <div class="newproducts-item">
+                        <img class="newproducts-item-img" src="http://www.colorhexa.com/e7e7e7.png">
+                        <div class="newproducts-item-type type-color-flowers">FLOWERS</div>
+                        <div class="newproducts-item-title">Perrie Edwards And Her Fab Feshion File</div>
+                    </div>
+                </div>
+                <div class="newproducts-line" data-newproducts-number="4" style="display:none">
+                    <div class="newproducts-item newproducts-item-first">
+                        <img class="newproducts-item-img" src="http://www.colorhexa.com/e7e7e7.png">
+                        <div class="newproducts-item-type type-color-t-shirt">T-SHIRT</div>
+                        <div class="newproducts-item-title">Fashion Targets Breast Cancer's Hottest Buys</div>
+                    </div>
+                    <div class="newproducts-item">
+                        <img class="newproducts-item-img" src="http://www.colorhexa.com/e7e7e7.png">
+                        <div class="newproducts-item-type type-color-parfume">PARFUME</div>
+                        <div class="newproducts-item-title">Ankle Boots: The Spring Edit</div>
+                    </div>
+                    <div class="newproducts-item">
+                        <img class="newproducts-item-img" src="http://www.colorhexa.com/e7e7e7.png">
+                        <div class="newproducts-item-type type-color-leather">LEATHER</div>
+                        <div class="newproducts-item-title">The 8 Must-Have Handbags of 2015</div>
+                    </div>
+                    <div class="newproducts-item">
+                        <img class="newproducts-item-img" src="http://www.colorhexa.com/e7e7e7.png">
+                        <div class="newproducts-item-type type-color-flowers">FLOWERS</div>
+                        <div class="newproducts-item-title">Perrie Edwards And Her Fab Feshion File</div>
+                    </div>
+                </div>
+            </div>
+            <div class="newproducts-lightbar-menu">
+                <div class="newproducts-lightbar" data-newproducts-lightbar-number="1"></div>
+                <div class="newproducts-lightbar" data-newproducts-lightbar-number="2"></div>
+                <div class="newproducts-lightbar" data-newproducts-lightbar-number="3"></div>
+                <div class="newproducts-lightbar" data-newproducts-lightbar-number="4"></div>
+            </div>
+            <iframe src="./bottomslide.html" class="bottomslide"></iframe>
+        </div>
+        <footer>
+            <div class="horizontal-seperator-for-footer"></div>
+            <div class="footer-contacts">
+                <div class="footer-contacts-element">
+                    <a href="tel:010460113"><img src="./img/iPhone.png" class="footer-contacts-element-img">
+                    <div class="footer-contacts-element-name">Call us</div>
+                    <div class="footer-contacts-element-text">
+                        1-800-277-7766
+                    </div></a>
+                </div>
+                <div class="footer-contacts-element">
+                    <a href="http://maps.google.com/?q=Moscow, Pushkin 32"><img src="./img/Location.png" class="footer-contacts-element-img">
+                    <div class="footer-contacts-element-name">Location</div>
+                    <div class="footer-contacts-element-text contact-location">
+                        Moscow, Pushkin str. 32/A
+                    </div></a>
+                </div>
+                <div class="footer-contacts-element-last">
+                    <a href="mailto:tigran@tadevosyan.net"><img src="./img/Mail.png" style="margin-left: 69px;margin-top: 10px;" class="footer-contacts-element-img">
+                    <div class="footer-contacts-element-name">Mail</div>
+                    <div class="footer-contacts-element-text contact-email">
+                        info@hayko.com
+                    </div></a>
+                </div>
+            </div>
+            <div style="background-color:black;height:1px"></div>
+            <div class="bottom-line">
+                <div class="footer-rights-reserved">2017 Hayk Gadukyan. All rights reserved</div>
+                <div class="footer-rights-reserved" style="width:300px;"><span class="footer-spaced-span">Terms & Conditions</span><span class="footer-spaced-span">Privacy</span><span>Downloads</span></div>
+                <div class="footer-rights-reserved">
+                    <a href="https://twitter.com/AlbertEinstein?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank"><img class="footer-social-img" src="./img/twitter.png"></a>
+                    <a href="https://plus.google.com/communities/113385895179315329377" target="_blank"><img class="footer-social-img" src="./img/google+.png"></a>
+                    <a href="https://www.facebook.com/AlbertEinstein/" target="_blank"><img class="footer-social-img" src="./img/facebook.png"></div></a>
+            </div>
+        </footer>
+        <script src="./script/animations.js"></script>
+    </body>
+</html>
