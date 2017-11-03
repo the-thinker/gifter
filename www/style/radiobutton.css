@@ -1,0 +1,25 @@
+
+input {
+	display: none;
+}
+
+label {
+	cursor: pointer;
+	margin: 10px 10px;
+    vertical-align: middle;
+}
+
+label:before {
+	content: '';
+	display: inline-block;
+	height: 15px;
+	width: 15px;
+	background: #dddddd;
+	border-radius: 50%;
+	z-index: 2;
+	transition: background .3s ease;
+}
+
+input:checked + label:before {
+	background: #D52683;
+}

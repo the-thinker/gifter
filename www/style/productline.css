@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css?family=Maven+Pro');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=PT+Sans');
+
+body{
+    margin:0px;
+    margin-top: 120px !important;
+    overflow: hidden;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+
+    -o-user-select: none;
+    user-select: none;
+}
+
+.title{
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 13px;
+    font-weight: bold;
+    font-family: "Lato";
+    color: rgb(52, 62, 92);
+    line-height: 1.2;
+    margin-left: calc(50vw - 640px);
+}
+
+.filters{
+    width:1300px;
+    height:40px;
+    border-right: 1px solid #f4f4f4;
+    margin-left: calc(50vw - 650px);
+    display: inline-flex;
+}
+
+.filter-unit{
+    width: 195px;
+    height: 40px;
+    border: 1px solid #f4f4f4;
+    border-right-width: 0px;
+    display: inline-flex;
+}
+
+.filter-unit-title{
+  font-size: 11px;
+  font-family: "Lato";
+  font-weight: bold;
+  color: rgb(161, 168, 189);
+  text-transform: uppercase;
+  line-height: 1.2;
+  text-align: left;
+  margin-top: 14px;
+  margin-left: 10px;
+}
+
+.filter-dropdown{
+    font-size: 11px;
+    font-weight: bold;
+    font-family: "Lato";
+    color: rgb(52, 62, 92);
+    line-height: 3.6;
+    margin-left: 90px;
+    cursor: pointer;
+}
+
+.filter-dropdown img{
+    margin-left: 5px;
+}
+
+.filter-price input{
+  font-size: 11px;
+  font-family: "Lato";
+  font-weight: bold;
+  display: inline !important;
+    border-color: #e5e9f1;
+    background-color: #e5e9f1;
+    outline-width: 0px;
+    width: 55px;
+    height: 20px;
+    margin-left: 12px;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 20px;
+    text-align: center;
+    margin-top: 7px;
+}
+
+.filter-currency{
+    font-size: 11px;
+  font-weight: bold;
+  font-family: "Lato";
+  color: rgb(161, 168, 189);
+  text-transform: uppercase;
+  line-height: 3.6;
+  margin-left: 6px;
+}
+
+.filter-selectable{
+    font-size: 13px;
+    font-family: "Lato";
+    color: rgb(52, 62, 92);
+    height: 15px;
+    /* line-height: 2.8; */
+    cursor: pointer;
+    border-color: #e5e9f1;
+    border-style: solid;
+    border-width: 0px;
+    vertical-align: middle;
+    display: table-cell;
+    text-align: center;
+}
+
+.filter-selectable-txt:active{
+    border-color: #e6eaf1;
+    background-color: #e5e9f1;
+    width: 100px;
+    height: 20px;
+    /* border-width: 217px; */
+    border-radius: 10px;
+    line-height: 20px;
+    /* vertical-align: middle; */
+    border-style: solid;
+    margin: 0 auto;
+}
+
+
+
+
+
+
+/*dsadasd*/
+
+
+
+
+.product-label{
+  font-size: 20px;
+  font-family: 'Maven Pro', sans-serif;
+  text-transform: uppercase;
+  line-height: 1.2;
+  letter-spacing: .5px;
+  text-align: center;
+  padding: 18px 0;
+}
+
+.product-left-space{
+    z-index: 100;
+    width: calc( 50vw - 600px );
+    background-color: white;
+    height: 732px;
+    margin-top: -4px;
+    position: absolute;
+}
+
+.product-right-space{
+    z-index: 100;
+    width: calc( 50vw - 600px );
+    background-color: white;
+    height: 732px;
+    margin-top: -4px;
+    position: absolute;
+    margin-left: calc( 50vw + 600px );
+}
+
+.product{
+    margin-top: 4px;
+    display: inline-flex;
+}
+
+.product-div{
+    margin-top: 30px;
+}
+
+.product-line{
+    margin-top: -5px;
+    height: 367px;
+    display: inline-flex;
+}
+
+.product-first-line{
+    margin-left: calc( 50vw - 600px );
+    /*padding-left: 4px;*/
+    width: 6px;
+}
+
+.product-item{
+    font-family: 'Montserrat', sans-serif;
+    display: inline-block;
+    height: 365px;
+    width:298px;
+    border:1px #dddddd solid;
+}
+
+.product-title{
+    cursor: pointer;
+    position: absolute;
+    width:150px;
+    margin:30px 74px;
+    text-align: center;
+    font-size: 17px;
+    line-height: 1.294;
+}
+
+.product-subtitle{
+    position: absolute;
+    width:100px;
+    margin:80px 99px;
+    text-align: center;
+    color: #999999;
+    line-height: 2;
+    font-size: 12px;
+}
+
+.product-image{
+    width:216px;
+    position: absolute;
+    margin-top: 110px;
+    margin-left: 41px;
+}
+
+.product-price{
+    font-size: 20px;
+    line-height: 1.2;
+    color: #be926f;
+    position: absolute;
+    width:100px;
+    text-align: center;
+    margin-left: 99px;
+    margin-top: 330px;
+}
+
+.product-overflow{
+    display: none;
+    width:216px;
+    height: 216px;
+    position: absolute;
+    margin-top: 110px;
+    margin-left: 41px;
+    background-color: rgba(255,255,255,0.85);
+}
+
+.product-addtobag{
+    cursor: pointer;
+    position: absolute;
+    width: 130px;
+    height: 40px;
+    margin-left: 43px;
+    /*margin-top:74px;*/
+    background-color: #be926f;
+    color: white;
+    font-weight: bold;
+    line-height: 40px;
+    text-align: center;
+    font-size: 13px;
+}
+
+.product-wishlist{
+    cursor: pointer;
+    color:#999999;
+    position: absolute;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 1.846;
+    text-align: center;
+    width: 112px;
+    margin-left: 51px;
+    margin-top: 50px;
+}
+
+.product-list-select{
+    margin-top: 15px;
+    width: 190px;
+    margin-left: calc( 50vw - 94px);
+}
+
+.product-list-select img{
+    vertical-align: bottom;
+    margin:0 10px;
+    cursor: pointer;
+}
+
+.user-info-div {
+    margin-top: -40px !important;
+    margin-left: calc( 100vw - 370px) !important;
+}
+
+.search-back {
+    margin-top: -9px;
+}
+
+.sign-up-popup {
+    margin-top: -120px;
+}
+
+.user-buybox-div{
+    margin-top: -50px;
+    margin-left: calc( 100vw - 330px);
+}
+
+
+/*.{
+    border: 2px solid #e5e9f1;
+    background-color: #e5e9f1;
+    border-radius: 10px;
+}*/

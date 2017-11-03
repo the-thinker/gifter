@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+.buybox-popup{
+    background-color: rgba(18,18,18,0.6);
+    position: absolute;
+    z-index: 100000000000000;
+    height: 1000vh;
+    width:1000vw;
+    margin-top: -100px;
+}
+
+.buybox-popup-div{
+    background-color: #1b1a1a;
+    height: 600px;
+    width: 1200px;
+    margin-left: calc( 50vw - 600px );
+    margin-top: 300px !important;
+}
+
+.buybox-popup-div-close{
+    float: right;
+    width: 15px;
+    margin: 15px 15px 0 0;
+    cursor: pointer;
+}
+
+.buybox-popup-div-top{
+    padding-top: 20px;
+    height:50px;
+}
+
+.buybox-popup-div-top-t1 {
+    margin-top: 25px;
+    margin-left: 50px;
+  font-size: 21px;
+  font-family: "Lato";
+  color: rgb(102, 102, 102);
+  line-height: 0.247;
+}
+
+.buybox-popup-div-top-t1 span{
+    margin-left: 15px;
+  font-size: 15px;
+  color: rgb(0, 218, 162);
+}
+
+.buybox-popup-div-top-menu {
+  font-size: 16px;
+  font-family: "Lato";
+  color: rgb(5, 105, 79);
+    float: right;
+    margin-right: 200px;
+}
+
+.buybox-popup-div-top-menu .selected{
+      color: rgb(0, 218, 162);
+}
+
+.buybox-popup-div-selection{
+    display: inline-flex;
+    height:400px;
+    width: 1200px
+}
+
+.buybox-popup-div-selection .region-select{
+    width: 800px;
+    height: 400px;
+    display: inline-flex;
+}
+
+.buybox-popup-div-selection .region-select-column{
+    height: 400px;
+    margin-left: 50px;
+    margin-right: 75px;
+}
+
+.buybox-popup-div-selection .region-select-option {
+    padding-left: 10px;
+    font-size: 15px;
+    font-family: "Lato";
+    color: rgb(102, 102, 102);
+    width: 100px;
+    height: 25px;
+    line-height: 25px;
+    margin-top: 20px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.region-select-column .selected{
+    background-color: rgba(32,31,31,1);
+}
+
+.buybox-popup-div-selection .region-select-option:Hover{
+    background-color: rgba(32,31,31,1);
+}
+
+.buybox-popup-info-input{
+    width: 400px;
+    height: 400px;
+    padding-top: 10px;
+}
+
+.buybox-popup-info-input [type="text"]{
+    background-color: #201f1f;
+    height: 35px;
+    width: 250px;
+    border-width: 0px;
+    border-radius: 5px;
+    margin-top: 15px;
+    display: block;
+    color: white;
+    outline-width: 0;
+    padding-left: 15px;
+    font-size: 12.5px;
+}
+
+.buybox-popup-div-bottom{
+    position: absolute;
+    height:140px;
+    width: 1200px;
+    background-color: #201f1f;
+    margin-top: 460px;
+    display: inline-flex;
+}
+
+.buybox-popup-div-total-cost{
+    margin: 40px 0 0 50px;
+}
+
+.buybox-popup-div-total-cost .cost-text{
+  font-size: 21px;
+  font-family: "Lato";
+  color: rgb(0, 218, 162);
+}
+
+.buybox-popup-div-total-cost .price-text {
+  margin-top: 5px;
+  font-size: 21px;
+  font-family: "Lato";
+  color: rgb(255, 255, 255);
+}
+
+.buybox-popup-div-total-cost .price-text sup{
+      font-size: 12.5px;
+      font-family: "Lato";
+      color: rgb(0, 218, 162);
+}
+
+.buybox-popup-div-selected-item {
+    font-size: 13px;
+    font-family: "Lato";
+    color: rgb(187, 187, 187);
+    margin-top: 55px;
+    margin-left: 250px;
+}
+
+.buybox-popup-div-buy-button{
+    width: 179px;
+    height:56px;
+    background-color: #333333;
+    margin-top: 40px;
+    margin-left: 75px;
+    border-radius: 7px;
+}
+
+.buybox-popup-div-buy-button {
+  font-size: 20px;
+  font-family: "Lato";
+  color: rgba(196, 223, 155, 0.169);
+  line-height: 56px;
+  text-align: center;
+}

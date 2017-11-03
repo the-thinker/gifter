@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+body{
+    margin: 0;
+    overflow: hidden;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+
+    -o-user-select: none;
+    user-select: none;
+}
+
+.bottom-slider{
+    width: 1200px;
+    height: 200px;
+    background-color: #040a2b;
+}
+
+.bottom-slider-left-space{
+    z-index: 100;
+    width: calc( 50vw - 600px );
+    background-color: white;
+    height: 230px;
+    margin-top: -4px;
+    position: absolute;
+}
+
+.bottom-slider-right-space{
+    z-index: 100;
+    width: calc( 50vw - 600px );
+    background-color: white;
+    height: 230px;
+    margin-top: -4px;
+    position: absolute;
+    margin-left: calc( 50vw + 600px );
+}
+
+.bottom-slider-left-arrow{
+    position: absolute;
+    height:200px;
+    width: 50px;
+    z-index: 100;
+    background-color: #040a2b;
+}
+
+.bottom-slider-right-arrow{
+    position: absolute;
+    height:200px;
+    width: 50px;
+    z-index: 100;
+    margin-left: 1150px;
+    background-color: #040a2b;
+}
+
+.bottom-slider-left-arrow-img{
+    cursor: pointer;
+    margin: 87px 15px;
+}
+
+.bottom-slider-right-arrow-img{
+    cursor: pointer;
+    margin: 87px 9px;
+}
+
+.bottom-slider-content{
+    position: absolute;
+    margin-left: 50px;
+    display: inline-flex;
+}
+.bottom-slider-slide{
+    width: 1100px;
+    height: 200px;
+}
+
+.lorem-ipsum{
+    text-align: center;
+    font-family: "Montserrat";
+      font-size: 17px;
+    color: rgb(204, 204, 204);
+    color: white;
+    width: 800px;
+    margin: 0 auto;
+    margin-top: 80px;
+}
