@@ -1,0 +1,183 @@
+<link rel="stylesheet" href="/style/productline.css">
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+        <!-- <div class="title">FLOWERS</div> -->
+        <div class="filters">
+            <div class="filter-unit">
+                <div class="filter-unit-title">SORT BY:</div>
+                <div class="filter-dropdown">ANY<img src="/img/Open.png"></div>
+            </div>
+            <div class="filter-unit">
+                <div class="filter-unit-title">BRAND:</div>
+                <div class="filter-dropdown">ANY<img src="/img/Open.png"></div>
+            </div>
+            <div class="filter-unit">
+                <div class="filter-unit-title">MODEL:</div>
+                <div class="filter-dropdown">ANY<img src="/img/Open.png"></div>
+            </div>
+            <div class="filter-unit">
+                <div class="filter-unit-title">SHOP:</div>
+                <div class="filter-dropdown">ANY<img src="/img/Open.png"></div>
+            </div>
+            <div class="filter-unit" style="width: 228px;">
+                <div class="filter-unit-title">PRICE:</div>
+                <div class="filter-price">
+                    <input type="text" maxlength="7" style="margin-right:3px;">
+                    -
+                    <input type="text" maxlength="7" style="margin-left:3px;">
+                </div>
+                <div class="filter-currency">AMD</div>
+            </div>
+            <div class="filter-unit" style="display: table;width: 150px;">
+                <div class="filter-selectable"><div class="filter-selectable-txt">BESTSELLERS</div></div>
+            </div>
+            <div class="filter-unit" style="display: table;width: 150px;">
+                <div class="filter-selectable"><div class="filter-selectable-txt">OPEN NOW</div></div>
+            </div>
+        </div>
+        <div class="product-div" data-line-count="1">
+            <div class="product-line" data-product-count="<%= products.length %>"  data-line-number="1">
+                <% for(var ii = 0; ii < products.length; ++ii){%>
+                    <a href="<%= '/product/'+products[ii].productCode %>">
+                        <div class="product-item" data-code="<%= products[ii].productCode %>">
+                            <div class="product-title"><%= products[ii].title %></div>
+                            <div class="product-subtitle"><%= products[ii].category %></div>
+                            <img class="product-image" src="/images/products/<%= products[ii].productCode+'/'+products[ii].image[0] %>">
+                            <div class="product-price"><%= products[ii].Price %></div>
+                            <a>
+                                <div class="product-overflow">
+                                    <div class="product-addtobag">
+                                        Add to Bag >
+                                    </div>
+                                    <div class="product-wishlist">❤ Add to wishlist</div>
+                                </div>
+                            </a>
+                        </div>
+                    </a>
+                <% }; %>
+            </div>
+            <!-- <div class="product-line" data-product-count="11"  data-line-number="2">
+                <div class="product-item">
+                    <div class="product-title">Denim Shorts In Slim Fit</div>
+                    <div class="product-subtitle">Shorts</div>
+                    <img class="product-image" src="https://images-na.ssl-images-amazon.com/images/I/815UtryisXL._UL1500_.jpg">
+                    <div class="product-price">$124</div>
+                    <div class="product-overflow">
+                        <div class="product-addtobag">
+                            Add to Bag >
+                        </div>
+                        <div class="product-wishlist">❤ Add to wishlist</div>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <div class="product-title">Denim Shorts In Slim Fit</div>
+                    <div class="product-subtitle">Shorts</div>
+                    <img class="product-image" src="https://images-na.ssl-images-amazon.com/images/I/815UtryisXL._UL1500_.jpg">
+                    <div class="product-price">$124</div>
+                    <div class="product-overflow">
+                        <div class="product-addtobag">
+                            Add to Bag >
+                        </div>
+                        <div class="product-wishlist">❤ Add to wishlist</div>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <div class="product-title">Denim Shorts In Slim Fit</div>
+                    <div class="product-subtitle">Shorts</div>
+                    <img class="product-image" src="https://images-na.ssl-images-amazon.com/images/I/815UtryisXL._UL1500_.jpg">
+                    <div class="product-price">$124</div>
+                    <div class="product-overflow">
+                        <div class="product-addtobag">
+                            Add to Bag >
+                        </div>
+                        <div class="product-wishlist">❤ Add to wishlist</div>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <div class="product-title">Denim Shorts In Slim Fit</div>
+                    <div class="product-subtitle">Shorts</div>
+                    <img class="product-image" src="https://images-na.ssl-images-amazon.com/images/I/815UtryisXL._UL1500_.jpg">
+                    <div class="product-price">$124</div>
+                    <div class="product-overflow">
+                        <div class="product-addtobag">
+                            Add to Bag >
+                        </div>
+                        <div class="product-wishlist">❤ Add to wishlist</div>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <div class="product-title">Denim Shorts In Slim Fit</div>
+                    <div class="product-subtitle">Shorts</div>
+                    <img class="product-image" src="https://images-na.ssl-images-amazon.com/images/I/815UtryisXL._UL1500_.jpg">
+                    <div class="product-price">$124</div>
+                    <div class="product-overflow">
+                        <div class="product-addtobag">
+                            Add to Bag >
+                        </div>
+                        <div class="product-wishlist">❤ Add to wishlist</div>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <div class="product-title">Denim Shorts In Slim Fit</div>
+                    <div class="product-subtitle">Shorts</div>
+                    <img class="product-image" src="https://images-na.ssl-images-amazon.com/images/I/815UtryisXL._UL1500_.jpg">
+                    <div class="product-price">$124</div>
+                    <div class="product-overflow">
+                        <div class="product-addtobag">
+                            Add to Bag >
+                        </div>
+                        <div class="product-wishlist">❤ Add to wishlist</div>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <div class="product-title">Denim Shorts In Slim Fit</div>
+                    <div class="product-subtitle">Shorts</div>
+                    <img class="product-image" src="https://images-na.ssl-images-amazon.com/images/I/815UtryisXL._UL1500_.jpg">
+                    <div class="product-price">$124</div>
+                    <div class="product-overflow">
+                        <div class="product-addtobag">
+                            Add to Bag >
+                        </div>
+                        <div class="product-wishlist">❤ Add to wishlist</div>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <div class="product-title">Denim Shorts In Slim Fit</div>
+                    <div class="product-subtitle">Shorts</div>
+                    <img class="product-image" src="https://images-na.ssl-images-amazon.com/images/I/815UtryisXL._UL1500_.jpg">
+                    <div class="product-price">$124</div>
+                    <div class="product-overflow">
+                        <div class="product-addtobag">
+                            Add to Bag >
+                        </div>
+                        <div class="product-wishlist">❤ Add to wishlist</div>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <div class="product-title">Denim Shorts In Slim Fit</div>
+                    <div class="product-subtitle">Shorts</div>
+                    <img class="product-image" src="https://images-na.ssl-images-amazon.com/images/I/815UtryisXL._UL1500_.jpg">
+                    <div class="product-price">$124</div>
+                    <div class="product-overflow">
+                        <div class="product-addtobag">
+                            Add to Bag >
+                        </div>
+                        <div class="product-wishlist">❤ Add to wishlist</div>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <div class="product-title">Denim Shorts In Slim Fit</div>
+                    <div class="product-subtitle">Shorts</div>
+                    <img class="product-image" src="https://images-na.ssl-images-amazon.com/images/I/815UtryisXL._UL1500_.jpg">
+                    <div class="product-price">$124</div>
+                    <div class="product-overflow">
+                        <div class="product-addtobag">
+                            Add to Bag >
+                        </div>
+                        <div class="product-wishlist">❤ Add to wishlist</div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    <script src="/script/productline.js"></script>

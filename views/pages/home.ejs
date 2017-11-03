@@ -1,0 +1,155 @@
+<link rel="stylesheet" href="./style/main.css">
+<iframe src="./slideshow.html" class="slideshow"></iframe>
+<div class="bestsellers-label">BESTSELLERS</div>
+<div class="bestsellers">
+    <div class="bestsellers-left-space"></div>
+    <div class="bestsellers-right-space"></div>
+    <div class="bestseller-first-line"></div>
+    <% for(var ii = 0; ii < bestsellers.length/8; ++ii ){ %>
+        <div class="bestsellers-line" data-bestseller-number="<%= ii+1 %>">
+            <% for(var cc = 0; cc < 8; ++cc){%>
+                <a href="<%= '/product/'+bestsellers[ii*8+cc].productCode %>">
+                    <div class="bestsellers-item" data-code="<%= bestsellers[ii*8+cc].productCode %>">
+                        <div class="bestseller-title"><%= bestsellers[ii*8+cc].title %></div>
+                        <div class="bestseller-subtitle"><a href="<%= '/search/'+ bestsellers[ii*8+cc].category.toLowerCase() %>"><%= bestsellers[ii*8+cc].category %></a></div>
+                        <img class="bestseller-image" src="/images/products/<%= bestsellers[ii*8+cc].productCode+"/"+bestsellers[ii*8+cc].image[0] %>">
+                        <div class="bestseller-price"><%= bestsellers[ii*8+cc].Price %></div>
+                        <div class="bestseller-overflow">
+                            <div class="bestseller-addtobag">
+                                Add to Bag >
+                            </div>
+                            <div class="bestseller-wishlist">❤ Add to wishlist</div>
+                        </div>
+                    </div>
+                </a>
+            <% }; %>
+        </div>
+    <% }; %>
+</div>
+<div class="bestsellers-list-select" data-bestsellers-count="<%= bestsellers.length/8 %>">
+    <img width="13px" height="22px" src="./img/_left.png" id="bestsellers_prew_page">
+    <input type="radio" id="rad1" name="rads" data-radio-bestseller-number="1" checked="true">
+    <label for="rad1"></label>
+    <% for(var ii = 2; ii <= bestsellers.length/8; ++ii ){ %>
+        <input type="radio" id="rad<%= ii %>" name="rads" data-radio-bestseller-number="<%= ii %>">
+        <label for="rad<%= ii %>"></label>
+    <% }; %>
+
+        <!--
+        <input type="radio" id="rad3" name="rads" data-radio-bestseller-number="3">
+        <label for="rad3"></label> -->
+    <img width="13px" height="22px" src="./img/_right.png" id="bestsellers_next_page">
+</div>
+
+<div class="horizontal-seperator"></div><div class="newproducts-menu">
+    <div class="newproducts-menu-prew">
+        <img width="13px" height="22px" src="./img/_left.png" style="float:left;">
+        <div class="newproducts-menu-prew-text">PREW</div>
+    </div>
+    <div class="newproducts-menu-label">
+        NEW PRODUCTS
+    </div>
+    <div class="newproducts-menu-next">
+        <img width="13px" height="22px" src="./img/_right.png" style="float:right;">
+        <div class="newproducts-menu-next-text">NEXT</div>
+    </div>
+</div>
+<div class="newproducts-left-space"></div>
+<div class="newproducts-right-space"></div>
+<div class="newproducts">
+    <div class="newproducts-line" data-newproducts-number="1">
+        <div class="newproducts-item newproducts-item-first">
+            <img class="newproducts-item-img" src="http://www.colorhexa.com/e7e7e7.png">
+            <div class="newproducts-item-type type-color-t-shirt">T-SHIRT</div>
+            <div class="newproducts-item-title">Fashion Targets Breast Cancer's Hottest Buys</div>
+        </div>
+        <div class="newproducts-item">
+            <img class="newproducts-item-img" src="http://www.colorhexa.com/e7e7e7.png">
+            <div class="newproducts-item-type type-color-parfume">PARFUME</div>
+            <div class="newproducts-item-title">Ankle Boots: The Spring Edit</div>
+        </div>
+        <div class="newproducts-item">
+            <img class="newproducts-item-img" src="http://www.colorhexa.com/e7e7e7.png">
+            <div class="newproducts-item-type type-color-leather">LEATHER</div>
+            <div class="newproducts-item-title">The 8 Must-Have Handbags of 2015</div>
+        </div>
+        <div class="newproducts-item">
+            <img class="newproducts-item-img" src="http://www.colorhexa.com/e7e7e7.png">
+            <div class="newproducts-item-type type-color-flowers">FLOWERS</div>
+            <div class="newproducts-item-title">Perrie Edwards And Her Fab Feshion File</div>
+        </div>
+    </div>
+    <div class="newproducts-line" data-newproducts-number="2" style="display:none">
+        <div class="newproducts-item newproducts-item-first">
+            <img class="newproducts-item-img" src="http://www.colorhexa.com/e7e7e7.png">
+            <div class="newproducts-item-type type-color-t-shirt">T-SHIRT</div>
+            <div class="newproducts-item-title">Fashion Targets Breast Cancer's Hottest Buys</div>
+        </div>
+        <div class="newproducts-item">
+            <img class="newproducts-item-img" src="http://www.colorhexa.com/e7e7e7.png">
+            <div class="newproducts-item-type type-color-parfume">PARFUME</div>
+            <div class="newproducts-item-title">Ankle Boots: The Spring Edit</div>
+        </div>
+        <div class="newproducts-item">
+            <img class="newproducts-item-img" src="http://www.colorhexa.com/e7e7e7.png">
+            <div class="newproducts-item-type type-color-leather">LEATHER</div>
+            <div class="newproducts-item-title">The 8 Must-Have Handbags of 2015</div>
+        </div>
+        <div class="newproducts-item">
+            <img class="newproducts-item-img" src="http://www.colorhexa.com/e7e7e7.png">
+            <div class="newproducts-item-type type-color-flowers">FLOWERS</div>
+            <div class="newproducts-item-title">Perrie Edwards And Her Fab Feshion File</div>
+        </div>
+    </div>
+    <div class="newproducts-line" data-newproducts-number="3" style="display:none">
+        <div class="newproducts-item newproducts-item-first">
+            <img class="newproducts-item-img" src="http://www.colorhexa.com/e7e7e7.png">
+            <div class="newproducts-item-type type-color-t-shirt">T-SHIRT</div>
+            <div class="newproducts-item-title">Fashion Targets Breast Cancer's Hottest Buys</div>
+        </div>
+        <div class="newproducts-item">
+            <img class="newproducts-item-img" src="http://www.colorhexa.com/e7e7e7.png">
+            <div class="newproducts-item-type type-color-parfume">PARFUME</div>
+            <div class="newproducts-item-title">Ankle Boots: The Spring Edit</div>
+        </div>
+        <div class="newproducts-item">
+            <img class="newproducts-item-img" src="http://www.colorhexa.com/e7e7e7.png">
+            <div class="newproducts-item-type type-color-leather">LEATHER</div>
+            <div class="newproducts-item-title">The 8 Must-Have Handbags of 2015</div>
+        </div>
+        <div class="newproducts-item">
+            <img class="newproducts-item-img" src="http://www.colorhexa.com/e7e7e7.png">
+            <div class="newproducts-item-type type-color-flowers">FLOWERS</div>
+            <div class="newproducts-item-title">Perrie Edwards And Her Fab Feshion File</div>
+        </div>
+    </div>
+    <div class="newproducts-line" data-newproducts-number="4" style="display:none">
+        <div class="newproducts-item newproducts-item-first">
+            <img class="newproducts-item-img" src="http://www.colorhexa.com/e7e7e7.png">
+            <div class="newproducts-item-type type-color-t-shirt">T-SHIRT</div>
+            <div class="newproducts-item-title">Fashion Targets Breast Cancer's Hottest Buys</div>
+        </div>
+        <div class="newproducts-item">
+            <img class="newproducts-item-img" src="http://www.colorhexa.com/e7e7e7.png">
+            <div class="newproducts-item-type type-color-parfume">PARFUME</div>
+            <div class="newproducts-item-title">Ankle Boots: The Spring Edit</div>
+        </div>
+        <div class="newproducts-item">
+            <img class="newproducts-item-img" src="http://www.colorhexa.com/e7e7e7.png">
+            <div class="newproducts-item-type type-color-leather">LEATHER</div>
+            <div class="newproducts-item-title">The 8 Must-Have Handbags of 2015</div>
+        </div>
+        <div class="newproducts-item">
+            <img class="newproducts-item-img" src="http://www.colorhexa.com/e7e7e7.png">
+            <div class="newproducts-item-type type-color-flowers">FLOWERS</div>
+            <div class="newproducts-item-title">Perrie Edwards And Her Fab Feshion File</div>
+        </div>
+    </div>
+</div>
+<div class="newproducts-lightbar-menu">
+    <div class="newproducts-lightbar" data-newproducts-lightbar-number="1"></div>
+    <div class="newproducts-lightbar" data-newproducts-lightbar-number="2"></div>
+    <div class="newproducts-lightbar" data-newproducts-lightbar-number="3"></div>
+    <div class="newproducts-lightbar" data-newproducts-lightbar-number="4"></div>
+</div>
+<iframe src="./bottomslide.html" class="bottomslide"></iframe>

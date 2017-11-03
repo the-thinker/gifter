@@ -1,0 +1,250 @@
+<link rel="stylesheet" href="/style/productunit.css">
+<div class="product">
+    <img src="/img/slide_left.png" class="product-picture-slide-left">
+    <img src="/img/slide_right.png" class="product-picture-slide-right">
+    <div class="product-history-menu">
+        <div class="back-sign"><img src="/img/left_arrow.png" style="width: 12px;margin-right: 5px;"></div><a href="<%= '/search/'+ product.category.toLowerCase() %>"><%- product.category %></a><div class="back-sign"><img src="/img/left_arrow.png" style="width: 12px;margin-right: 5px;"></div><%- product.title1+" "+product.title2 %>
+    </div>
+    <div class="product-images" data-img-count="<%- product.images.length %>" style="margin-left:<%- -(480*(product.images.length) - 90) %>px;">
+        <% for( var ii = 0; ii < product.images.length; ii++){ %>
+            <img src="/images/products/<%- product.productCode+"/"+product.images[ii] %>" data-img-number="<%- ii+1 %>">
+        <% }; %>
+        <img src="/images/products/<%- product.productCode+"/"+product.images[0] %>" class="selected-img" data-img-number="1">
+        <% for( var ii = 1; ii < product.images.length; ii++){ %>
+            <img src="/images/products/<%- product.productCode+"/"+product.images[ii] %>" data-img-number="<%- ii+1 %>">
+        <% }; %>
+        <% for( var ii = 0; ii < product.images.length; ii++){ %>
+            <img src="/images/products/<%- product.productCode+"/"+product.images[ii] %>" data-img-number="<%- ii+1 %>">
+        <% }; %>
+        <!-- <img src="./img/product/_1.jpg" data-img-number="1">
+        <img src="./img/product/_2.jpg" data-img-number="2">
+        <img src="./img/product/_3.jpg" data-img-number="3">
+        <img src="./img/product/_1.jpg" class="selected-img" data-img-number="1">
+        <img src="./img/product/_2.jpg" data-img-number="2">
+        <img src="./img/product/_3.jpg" data-img-number="3">
+        <img src="./img/product/_1.jpg" data-img-number="1">
+        <img src="./img/product/_2.jpg" data-img-number="2">
+        <img src="./img/product/_3.jpg" data-img-number="3"> -->
+    </div>
+    <div class="product-option">
+        <div class="product-title"><%- product.title1 %><span style="color:#a2a2a2;"><%- " "+product.title2 %></span></div>
+        <div class="product-review-bar">
+            <% for( var ii = 0; ii < 5; ii++){ %>
+                <% if(ii < product.review_result.count){ %>
+                    <img class="product-star" src="/img/gold_star.png">
+                <% } else { %>
+                    <img class="product-star" src="/img/gray_star.png">
+                <% }; %>
+            <% }; %>
+            <!-- <img class="product-star" src="/img/gold_star.png"><img class="product-star" src="/img/gold_star.png"><img class="product-star" src="/img/gold_star.png"><img class="product-star" src="/img/gold_star.png"><img class="product-star" src="/img/gray_star.png"> -->
+            <span style="color:#747474;margin-left:5px;"><%- product.review_result.count %> Review(s)</span>    |    <span style="color:#9eafff">Add a Review</span>    |    <span>Share:</span>
+        <img class="product-social-img" src="/img/facebook.png"> <img class="product-social-img" src="/img/twitter.png">
+        </div>
+        <div class="product-price">
+            <% if( product.old_price > 0 ) { %>
+                <sup><%- product.currency %></sup><span style="text-decoration: line-through;"><%- product.old_price %></span><sup style="margin-left:20px;">
+            <%}%>
+            <%- product.currency %></sup><%- product.price %>
+        </div>
+        <div class="product-availability">Availability:
+            <% if( product.availible ) { %>
+                <span style="color:#b2b2b2;font-size: 14px;"> In stock</span>
+            <%} else {%>
+                <span style="color:#b2b2b2;font-size: 14px;"> Out of stock</span>
+            <%}%>
+        </div>
+        <div class="product-code" data-code="<%= product.productCode %>">Product Code:<span style="color:#b2b2b2;font-size: 14px;"> <%- product.product_code %></span></div>
+        <div class="product-tags">Tags:<span style="color:#9eafff;font-size: 14px;">
+            <% for( var ii = 0; ii < product.tags.length-1; ii++){ %>
+                <%-   product.tags[ii]+", " %>
+            <% }; %>
+                <%-  product.tags[product.tags.length-1] %>
+         </span></div>
+        <div class="product-description"><%-  product.description %></div>
+        <ul class="product-specs">
+            <% for( var ii = 0; ii < product.specs.length; ii++){%>
+                <li><%- product.specs[ii]%></li>
+            <%};%>
+        </ul>
+        <!-- <div class="product-option-title">
+            SIZE<span style="margin-left: 160px;">QTY</span>
+        </div>
+        <div class="product-option-select">
+            <select>
+              <option value="" disabled selected>Select Size</option>
+              <option value="volvo">S</option>
+              <option value="saab">M</option>
+              <option value="vw">L</option>
+              <option value="audi">XL</option>
+              <option value="audi">XXL</option>
+            </select>
+            <input type="number" value="1" min="1">
+        </div> -->
+        <%if(product.options.available_option.size == true){%>
+            <div class='product-option-element'>
+                <div class='product-option-title'>SIZE</div>
+                <div class="product-option-select">
+                    <select>
+                      <option value="" disabled selected>Select Size</option>
+                      <option value="volvo">S</option>
+                      <option value="saab">M</option>
+                      <option value="vw">L</option>
+                      <option value="audi">XL</option>
+                      <option value="audi">XXL</option>
+                    </select>
+                </div>
+            </div>
+        <%};%>
+        <%if(product.options.available_option.qty == true){%>
+            <div class='product-option-element'>
+                <div class='product-option-title'>QTY</div>
+                <div class="product-option-select">
+                    <input type="number" value="1" min="1">
+                </div>
+            </div>
+        <%};%>
+        <br>
+        <div class="product-button-div">
+            <div class="add-to-cart"><img src="/img/white_cart.png"><!-- <svg   xmlns="http://www.w3.org/2000/svg"  xmlns:xlink="http://www.w3.org/1999/xlink"  width="0.564cm" height="0.459cm"> <text kerning="auto" font-family="FontAwesome" fill="rgb(255, 255, 255)" transform="matrix( 0.82779414071281, 0, 0, 0.82812725290174,4.30596864706911, 11.9258897610122)" font-size="18px">&#61562;</text> </svg> --><div>ADD TO CART</div></div>
+            <div class="add-to-whishlist"><img src="/img/gray_heart.png"><!-- <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"width="0.494cm" height="0.494cm"><text kerning="auto" font-family="FontAwesome" fill="rgb(69, 70, 71)" transform="matrix( 0.82779414071281, 0, 0, 0.82812725290174,3.29520732323988, 11.9973339076355)" font-size="17px">&#61578;</text></svg> --><div>ADD TO WHISHLIST</div></div>
+        </div>
+    </div>
+    <!-- <img style="position: absolute;margin-top: 173px;margin-left: 750px;" src="./img/Rectangle2.png"> -->
+    <a href="https://www.vivarobet.am/"><div class="commercial-div"><img style="margin: 182px auto;display: block;" src="/img/vivaro.png"></div></a>
+    <div class="product-info">
+        <div class="product-info-menu">
+            <div class="product-info-menu-unit product-info-menu-unit-selected" data-info-number="1">DESCRIPTION</div>
+            <div class="product-info-menu-unit" data-info-number="2">VIDEOS</div>
+            <div class="product-info-menu-unit" data-info-number="3">SIZE & SPECS</div>
+            <div class="product-info-menu-unit" data-info-number="4" style="width: 200px;">DELIVERY & RETURNS</div>
+            <div class="product-info-menu-unit" data-info-number="5">REVIEWS</div>
+        </div>
+        <div class="product-info-content" data-info-number="1"><!-- style="display:none" -->
+            <%-  product.description %>
+        </div>
+        <div class="product-info-content" data-info-number="2" style="display:none">
+            You think water moves fast? You should see ice. It moves like it has a mind. Like it knows it killed the world once and got a taste for murder. After the avalanche, it took us a week to climb out. Now, I don't know exactly when we turned on each other, but I know that seven of us survived the slide... and only five made it out. Now we took an oath, that I'm breaking now. We said we'd say it was the snow that killed the other two, but it wasn't. Nature is lethal but it doesn't hold a candle to man.
+        </div>
+        <div class="product-info-content" data-info-number="3" style="display:none">
+            Do you see any Teletubbies in here? Do you see a slender plastic tag clipped to my shirt with my name printed on it? Do you see a little Asian child with a blank expression on his face sitting outside on a mechanical helicopter that shakes when you put quarters in it? No? Well, that's what you see at a toy store. And you must think you're in a toy store, because you're here shopping for an infant named Jeb.
+        </div>
+        <div class="product-info-content" data-info-number="4" style="display:none">
+            Look, just because I don't be givin' no man a foot massage don't make it right for Marsellus to throw Antwone into a glass motherfuckin' house, fuckin' up the way the nigger talks. Motherfucker do that shit to me, he better paralyze my ass, 'cause I'll kill the motherfucker, know what I'm sayin'?
+        </div>
+        <div class="product-info-content" data-info-number="5" style="display:none">
+            You think water moves fast? You should see ice. It moves like it has a mind. Like it knows it killed the world once and got a taste for murder. After the avalanche, it took us a week to climb out. Now, I don't know exactly when we turned on each other, but I know that seven of us survived the slide... and only five made it out. Now we took an oath, that I'm breaking now. We said we'd say it was the snow that killed the other two, but it wasn't. Nature is lethal but it doesn't hold a candle to man.
+        </div>
+    </div>
+</div>
+    <div class="related-menu">
+        <div class="related-menu-prew">
+            <img width="13px" height="22px" src="/img/_left.png" style="float:left;">
+            <div class="related-menu-prew-text">PREW</div>
+        </div>
+        <div class="related-menu-label">
+            RELATED PRODUCTS
+        </div>
+        <div class="related-menu-next">
+            <img width="13px" height="22px" src="/img/_right.png" style="float:right;">
+            <div class="related-menu-next-text">NEXT</div>
+        </div>
+    </div>
+    <div class="related-left-space"></div>
+    <div class="related-right-space"></div>
+    <div class="related">
+        <div class="related-line" data-related-number="1">
+            <div class="related-item related-item-first">
+                <img class="related-item-img" src="http://www.colorhexa.com/e7e7e7.png">
+                <div class="related-item-type type-color-t-shirt">T-SHIRT</div>
+                <div class="related-item-title">Fashion Targets Breast Cancer's Hottest Buys</div>
+            </div>
+            <div class="related-item">
+                <img class="related-item-img" src="http://www.colorhexa.com/e7e7e7.png">
+                <div class="related-item-type type-color-parfume">PARFUME</div>
+                <div class="related-item-title">Ankle Boots: The Spring Edit</div>
+            </div>
+            <div class="related-item">
+                <img class="related-item-img" src="http://www.colorhexa.com/e7e7e7.png">
+                <div class="related-item-type type-color-leather">LEATHER</div>
+                <div class="related-item-title">The 8 Must-Have Handbags of 2015</div>
+            </div>
+            <div class="related-item">
+                <img class="related-item-img" src="http://www.colorhexa.com/e7e7e7.png">
+                <div class="related-item-type type-color-flowers">FLOWERS</div>
+                <div class="related-item-title">Perrie Edwards And Her Fab Feshion File</div>
+            </div>
+        </div>
+        <div class="related-line" data-related-number="2" style="display:none">
+            <div class="related-item related-item-first">
+                <img class="related-item-img" src="http://www.colorhexa.com/e7e7e7.png">
+                <div class="related-item-type type-color-t-shirt">T-SHIRT</div>
+                <div class="related-item-title">Fashion Targets Breast Cancer's Hottest Buys</div>
+            </div>
+            <div class="related-item">
+                <img class="related-item-img" src="http://www.colorhexa.com/e7e7e7.png">
+                <div class="related-item-type type-color-parfume">PARFUME</div>
+                <div class="related-item-title">Ankle Boots: The Spring Edit</div>
+            </div>
+            <div class="related-item">
+                <img class="related-item-img" src="http://www.colorhexa.com/e7e7e7.png">
+                <div class="related-item-type type-color-leather">LEATHER</div>
+                <div class="related-item-title">The 8 Must-Have Handbags of 2015</div>
+            </div>
+            <div class="related-item">
+                <img class="related-item-img" src="http://www.colorhexa.com/e7e7e7.png">
+                <div class="related-item-type type-color-flowers">FLOWERS</div>
+                <div class="related-item-title">Perrie Edwards And Her Fab Feshion File</div>
+            </div>
+        </div>
+        <div class="related-line" data-related-number="3" style="display:none">
+            <div class="related-item related-item-first">
+                <img class="related-item-img" src="http://www.colorhexa.com/e7e7e7.png">
+                <div class="related-item-type type-color-t-shirt">T-SHIRT</div>
+                <div class="related-item-title">Fashion Targets Breast Cancer's Hottest Buys</div>
+            </div>
+            <div class="related-item">
+                <img class="related-item-img" src="http://www.colorhexa.com/e7e7e7.png">
+                <div class="related-item-type type-color-parfume">PARFUME</div>
+                <div class="related-item-title">Ankle Boots: The Spring Edit</div>
+            </div>
+            <div class="related-item">
+                <img class="related-item-img" src="http://www.colorhexa.com/e7e7e7.png">
+                <div class="related-item-type type-color-leather">LEATHER</div>
+                <div class="related-item-title">The 8 Must-Have Handbags of 2015</div>
+            </div>
+            <div class="related-item">
+                <img class="related-item-img" src="http://www.colorhexa.com/e7e7e7.png">
+                <div class="related-item-type type-color-flowers">FLOWERS</div>
+                <div class="related-item-title">Perrie Edwards And Her Fab Feshion File</div>
+            </div>
+        </div>
+        <div class="related-line" data-related-number="4" style="display:none">
+            <div class="related-item related-item-first">
+                <img class="related-item-img" src="http://www.colorhexa.com/e7e7e7.png">
+                <div class="related-item-type type-color-t-shirt">T-SHIRT</div>
+                <div class="related-item-title">Fashion Targets Breast Cancer's Hottest Buys</div>
+            </div>
+            <div class="related-item">
+                <img class="related-item-img" src="http://www.colorhexa.com/e7e7e7.png">
+                <div class="related-item-type type-color-parfume">PARFUME</div>
+                <div class="related-item-title">Ankle Boots: The Spring Edit</div>
+            </div>
+            <div class="related-item">
+                <img class="related-item-img" src="http://www.colorhexa.com/e7e7e7.png">
+                <div class="related-item-type type-color-leather">LEATHER</div>
+                <div class="related-item-title">The 8 Must-Have Handbags of 2015</div>
+            </div>
+            <div class="related-item">
+                <img class="related-item-img" src="http://www.colorhexa.com/e7e7e7.png">
+                <div class="related-item-type type-color-flowers">FLOWERS</div>
+                <div class="related-item-title">Perrie Edwards And Her Fab Feshion File</div>
+            </div>
+        </div>
+    </div>
+<div class="related-lightbar-menu">
+    <div class="related-lightbar" data-related-lightbar-number="1"></div>
+    <div class="related-lightbar" data-related-lightbar-number="2"></div>
+    <div class="related-lightbar" data-related-lightbar-number="3"></div>
+    <div class="related-lightbar" data-related-lightbar-number="4"></div>
+</div>
+<script src="/script/productunit.js"></script>
