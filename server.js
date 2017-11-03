@@ -166,7 +166,7 @@ if (!fs.existsSync(dir)){
 
 
 
-server.listen(8081, function () {
+server.listen(process.env.PORT || 8081, function () {
   console.log('Example app listening on port 80!')
 });
 
